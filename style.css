@@ -208,10 +208,11 @@ height: auto;
   opacity: 1;
 }
 
-.content-details h5 {
+.content-details h {
   color: white;
   font-family: "Playfair Display", sans-serif;
-   letter-spacing: 0.5em;
+  font-size: 1em;
+  letter-spacing: 0.5em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
@@ -220,7 +221,7 @@ height: auto;
   color: whitesmoke;
   font-family: "Playfair Display", sans-serif;
   letter-spacing: 0.09em;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .fadeIn-right {
@@ -237,9 +238,11 @@ height: auto;
   aspect-ratio: 1/1; /* To maintain square aspect ratio */
 }
 .baby1 {
+  display: flex;
   /* padding-top: 0.9rem; */
   padding-bottom: 0.9rem;
   font-size: 1.3rem;
+  justify-content: center;
 }
 .baby1,
 .baby2 {
@@ -374,12 +377,18 @@ footer {
   outline: none; /* Remove outline */
   background-color: #F8A226; /* Set a background color */
   color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
+  
   padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 50px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
 
 #myBtn:hover {
-  background-color: #F1ECE5; /* Add a dark-grey background on hover */
+  background-color: #F1ECE5; /* Add a background on hover */
+}
+
+.badge {
+  font-size: 0.7rem;
+  width: fit-content;
+  height: fit-content;
 }
