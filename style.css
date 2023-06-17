@@ -48,12 +48,12 @@ div .subtitle {
   font-family: "Quicksand", sans-serif;
   line-height: 1;
   padding-right: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1vw;
 }
 .span1 {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1vw;
 }
 
 .subtitle p {
@@ -68,7 +68,7 @@ div .title {
   font-family: "League Gothic", sans-serif;
   line-height: 0.8;
   color: #9a7330;
-  font-size: 4rem;
+  font-size: 6vw;
 }
 
 .title p {
@@ -94,8 +94,8 @@ div .title {
 .recipefullcontainer {
   display: flex;
   flex-direction: column;
-  flex
-justify-self: center;
+  
+  justify-self: center;
  padding: 4.3rem 7rem 0rem 7rem;
 }
 
@@ -114,7 +114,7 @@ justify-self: center;
 }
 
 .firstletter{
-  font-family: "League Gothic", sans-serif;
+  /* font-family: "League Gothic", sans-serif; */
   color: #9a7330;
   font-size: 1.5rem;}
 
@@ -385,6 +385,7 @@ footer {
 
 #myBtn:hover {
   background-color: #F1ECE5; /* Add a background on hover */
+  
 }
 
 .badge {
@@ -392,3 +393,100 @@ footer {
   width: fit-content;
   height: fit-content;
 }
+
+
+/* share button */
+
+.shareButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+ }
+
+ #shareButton {
+   padding: 10px 20px;
+   width: 250px;
+   border: none;
+   border-radius: 10px;
+   background-color: #F8A226;
+   color: #E12E21;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+
+ #shareButton:hover {
+   background-color:#93ab9a;
+   opacity: 0.3;
+ }
+
+ input[type=text] {
+  border: 2px solid #F8A226;
+  border-radius: 4px;
+}
+
+.row {
+  display: flex;
+  margin-top: 80px;
+}
+
+.f1 {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.bttn {
+  margin-left: 10px;
+}
+
+css
+}
+  .pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+
+  .pagination a:hover {
+    background-color: #999;
+    color: #fff;
+  }
+  .picture-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+
+  .picture {
+
+
+    flex-basis: 25%;
+  width: 100%;
+  height: auto;
+  }
+
+  .picture img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .picture a:hover img {
+    opacity: 0.8;
+  }
+  .container_f {
+
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1c633b;
+    font-family: "Quicksand", sans-serif;
+    color: #d3d3d3;
+
+  }

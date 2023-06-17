@@ -55,10 +55,6 @@
         </div>
       </div>
 
-      <!-- <div class="imgcontainer">
-        <img class="imghead" src=".\img\headphoto.jpeg" />
-      </div> -->
-      
     
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -106,6 +102,12 @@
         </a>
     </div>
 
+    <form class="f1" name="f1" action="" 
+    onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false">
+    <input type="text" name=t1 value="" size=100 placeholder="Type a word you want to find on the website and keep clicking the plant button or enter to find results">
+    <input class="bttn" type="submit" name=b1 value="&#127793">
+  
+</form>
       
       <div class="recipefullcontainer">
         <div class="parent1">
@@ -174,6 +176,17 @@
                    Meanwhile, in a large bowl, whisk together vinegar, mustard, remaining 3 tablespoons oil and 1/2 teaspoon each salt and pepper; stir in chopped scallions.
                   Add cucumber and toss to coat, then toss with toasted bread. Add peas, herbs and greens and toss gently to combine.
                 </p>
+                <div class="shareButton">
+                  <button id="shareButton">Share</button>
+                  <script>
+                      document.getElementById("shareButton").addEventListener("click", function() {
+                                  var message = "my alert message";
+                          var url = window.location.href;
+                          var alertMessage = `${message}\n\nURL: ${url}`;
+                          alert(alertMessage);
+                      });
+                    </script>
+                    </div>
                   
         </div>
       </div>
@@ -245,10 +258,34 @@
                   <span class="firstletter">H</span>eat some oil in a large pot and sauté the onion for about 2-3 minutes. Then mince and add the garlic, the zucchini, and the red bell pepper and cook for 2 more minutes.
             Add the remaining ingredients except for the cherry tomatoes. Cook for about 15 minutes (uncovered and on medium heat), then add the cherry tomatoes (sliced into halves) and cook for two more minutes. Season with salt and black pepper. Enjoy!
           </p>
+          <div class="shareButton">
+            <button id="shareButton">Share</button>
+            <script>
+                document.getElementById("shareButton").addEventListener("click", function() {
+                            var message = "my alert message";
+                    var url = window.location.href;
+                    var alertMessage = `${message}\n\nURL: ${url}`;
+                    alert(alertMessage);
+                });
+              </script>
+              </div>
+          
                   
         </div>
       </div>
       </div>
+
+      <div class="row">
+        <div class="col-12">
+            <div class="jumbotron p-3 p-md-5 rounded" style="background-image: url('https://im.indiatimes.in/content/2022/Jun/ThinkStock_62ab10d602829.jpg?w=1100&h=535&cc=1'); background-size: cover;">
+                <div class="col-12" style="background-color: rgba(37, 93, 11, 0.4);">
+                    <h1 class="display-4 text-white">Enjoy your Food</h1>
+                    <p class="lead text-light my-3">Vegan Cuisine gives you the recipes you need to have a wonderful food experience.</p>
+                    <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
       <div class="recipefullcontainer">
         <div class="parent1">
@@ -324,6 +361,17 @@
                   <span class="firstletter">P</span>repare the dressing: in a small bowl whisk together the oil, vinegar, mustard, maple syrup, salt, and pepper until well combined.
             <br><br>Salad: in a large bowl add the greens, quinoa, strawberries, apples, grapes and nuts. Pour dressing over salad mixture and toss to combine.
             Serve right away and enjoy! </p>
+            <div class="shareButton">
+              <button id="shareButton">Share</button>
+              <script>
+                  document.getElementById("shareButton").addEventListener("click", function() {
+                              var message = "my alert message";
+                      var url = window.location.href;
+                      var alertMessage = `${message}\n\nURL: ${url}`;
+                      alert(alertMessage);
+                  });
+                </script>
+                </div>
                   
         </div>
       </div>
@@ -362,7 +410,7 @@
   </div>
 
 <footer>
-  <div class="foot">© Copyright 2023</br>Olga Keyvan Federico </div>
+  <div class="foot">© Copyright 2023</br>Olga</div>
 </div>
 </footer>
 <button onclick="topFunction()" id="myBtn" title="Go to top"> &#x1F53A;
@@ -388,4 +436,69 @@
     document.documentElement.scrollTop = 0;
   }
   </script>
+
+
+
+<!-- sharebutton with vanilla DOM -->
+<!-- <div class="shareButton">
+  <button id="shareButton">Share</button>
+  <script>
+      document.getElementById("shareButton").addEventListener("click", function() {
+                  var message = "my alert message";
+          var url = window.location.href;
+          var alertMessage = `${message}\n\nURL: ${url}`;
+          alert(alertMessage);
+      });
+    </script>
+    </div> -->
+
+
+<!-- ctrlF -->
+
+
+
+<script language="JavaScript">
+  <!--
+  var TRange=null;
+  function findString (str) {
+   if (parseInt(navigator.appVersion)<4) return;
+   var strFound;
+   if (window.find) {
+  
+    // CODE FOR BROWSERS THAT SUPPORT window.find
+    strFound=self.find(str);
+    if (strFound && self.getSelection && !self.getSelection().anchorNode) {
+     strFound=self.find(str)
+    }
+    if (!strFound) {
+     strFound=self.find(str,0,1)
+     while (self.find(str,0,1)) continue
+    }
+   }
+   else if (navigator.appName.indexOf("Microsoft")!=-1) {
+  
+    // EXPLORER-SPECIFIC CODE
+  
+    if (TRange!=null) {
+     TRange.collapse(false)
+     strFound=TRange.findText(str)
+     if (strFound) TRange.select()
+    }
+    if (TRange==null || strFound==0) {
+     TRange=self.document.body.createTextRange()
+     strFound=TRange.findText(str)
+     if (strFound) TRange.select()
+    }
+   }
+   else if (navigator.appName=="Opera") {
+    alert ("Opera browsers not supported, sorry...")
+    return;
+   }
+   if (!strFound) alert ("String '"+str+"' not found!")
+   return;
+  }
+  //-->
+  </script>
+ 
+  </div> 
 </html>
