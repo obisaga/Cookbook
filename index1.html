@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@300&family=League+Gothic&family=Playfair+Display&family=Quicksand:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
   </head>
   <body>
     <div class="container bg-white rounded-15 pb-4">
@@ -41,13 +42,13 @@
         </div>
         <div class="d-flex flex-column justify-content-start title" style="font-family: 'League Gothic', sans-serif; line-height: 0.8; color: #9a7330; font-size: 50px;">
         <!--   class = " div .title" -->
-            <img class="d-flex justify-content-center align-items-center" src=".\img\vegan_icon.jpg"/>
+            <img class="d-flex justify-content-center align-items-center" src=".\img cookbook\download.png"/>
             <!--  //class ="imglogo " -->
         </div>
       </div>
 
       <div class="h-auto">    <!--  //class="imgcontainer " -->
-        <img class="img-fluid" src=".\img\headphoto.jpeg" /><!--  //class="imghead" -->
+        <img class="img-fluid" src=".\img cookbook\headphoto.jpeg" /><!--  //class="imghead" -->
       </div>
       
 
@@ -58,7 +59,7 @@
         </div>
         <div class="bg-secondary d-flex flex-row shadow"><!--  //class = "parent2" -->
           <div class="flex-grow-0 flex-shrink-0 flex-basis-30"><!-- class="child1" -->
-            <div class="w-100"><img src=".\img\dish1.jpeg"/></div> <!-- //class="child1 img " -->
+            <div class="w-100"><img src=".\img cookbook\dish1.jpeg"/></div> <!-- //class="child1 img " -->
           </div>
           <div class="d-flex flex-column align-items-center flex-grow-0 flex-shrink-0 flex-basis-70"><!-- //class=child2 -->
             <div class="font-serif text-center pt-4 fs-5">Ingredients:</div><!-- class="baby1" -->
@@ -94,7 +95,7 @@
           <div class="bg-secondary d-flex flex-row shadow"> <!-- //class="parent2" -->
     
             <div class="flex-grow-0 flex-shrink-0 flex-basis-30"><!-- class="child1" -->
-              <div class="w-100"><img src=".\img\dish1.jpeg"/></div><!-- //class="child1 img " -->
+              <div class="w-100"><img src=".\img cookbook\dish1.jpeg"/></div><!-- //class="child1 img " -->
             </div>
             <div class="d-flex flex-column align-items-center flex-grow-0 flex-shrink-0 flex-basis-70"><!-- //class=child2 -->
               <div class="font-serif text-center pt-4 fs-5">Ingredients:</div><!-- class="baby1" -->
@@ -131,7 +132,7 @@
     <div class="bg-secondary d-flex flex-row shadow"> <!-- //class="parent2" -->
 
       <div class="flex-grow-0 flex-shrink-0 flex-basis-30"><!-- class="child1" -->
-        <div class="w-100"><img src=".\img\dish1.jpeg"/></div><!-- //class="child1 img " -->
+        <div class="w-100"><img src=".\img cookbook\d.jpeg"/></div><!-- //class="child1 img " -->
       </div>
       <div class="d-flex flex-column align-items-center flex-grow-0 flex-shrink-0 flex-basis-70"><!-- //class=child2 -->
         <div class="font-serif text-center pt-4 fs-5">Ingredients:</div><!-- class="baby1" -->
@@ -160,10 +161,69 @@
       </p>
     </div>
   </div>
+  <div class="shareButton">
+    <button id="shareButton">Share</button>
+
+    <script>
+        document.getElementById("shareButton").addEventListener("click", function() {
+          
+
+            var message = "my alert message";
+            var url = window.location.href;
+            var alertMessage = `${message}\n\nURL: ${url}`;
+            alert(alertMessage);
+        });
+      </script>
+
+    <style>
+        .shareButton {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 10vh;
+        }
+
+        #shareButton {
+          padding: 10px 20px;
+          border-radius: 10px;
+          background-color: #64657e;
+          color: #fff;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        #shareButton:hover {
+          background-color: #141619;
+        }
+        .pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .pagination a {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #f2f2f2;
+      color: #333;
+      text-decoration: none;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+
+    .pagination a:hover {
+      background-color: #999;
+      color: #fff;
+    }
+    </style>
+    </div> 
+    <div class="pagination">
+      <a href="previous-page.html">Previous</a>
+      <a href="next-page.html">Next</a>
+    </div>
    
   </body>
   <div class="d-flex flex-grow-1 justify-content-center pt-2"><!-- //class="imgcontainer2" -->
-    <img class="img-dekor" src=".\img\dekor.png" /><!-- //class="imgdekor" -->
+    <img class="img-dekor" src=".\img cookbook\dekor.png" /><!-- //class="imgdekor" -->
   </div>
 
 <footer class="position-absolute bottom-0 w-100 h-50"> <!-- //class="footer" -->
